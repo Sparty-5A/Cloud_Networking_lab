@@ -1,0 +1,31 @@
+# Basic VPC Configuration
+# Simple two-subnet VPC without VPN
+
+network:
+  project_name: "basic-lab"
+  environment: "dev"
+  region: "us-east-1"
+  
+  vpc:
+    cidr_block: "10.0.0.0/16"
+    enable_dns_hostnames: true
+    enable_dns_support: true
+    
+    subnets:
+      - name: "public-a"
+        cidr_block: "10.0.1.0/24"
+        availability_zone: "us-east-1a"
+        public: true
+        
+      - name: "public-b"
+        cidr_block: "10.0.2.0/24"
+        availability_zone: "us-east-1b"
+        public: true
+  
+  # VPN disabled
+  vpn:
+    enabled: false
+  
+  # Optional features
+  enable_nat_gateway: false
+  enable_flow_logs: false

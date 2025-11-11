@@ -1,0 +1,14 @@
+cd ~/Cloud_Networking_Lab/pulumi
+source .venv/bin/activate
+
+# Start fresh
+pulumi stack init dev
+pulumi config set aws:region us-east-1
+pulumi config set vpc_cidr 10.0.0.0/16
+pulumi config set enable_vpn false
+
+# Deploy
+pulumi up
+
+
+export PULUMI_CONFIG_PASSPHRASE=""

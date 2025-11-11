@@ -1,0 +1,53 @@
+# VPC with VPN Configuration
+# Hybrid cloud setup with site-to-site VPN
+
+network:
+  project_name: "hybrid-lab"
+  environment: "dev"
+  region: "us-east-1"
+  
+  vpc:
+    cidr_block: "10.0.0.0/16"
+    enable_dns_hostnames: true
+    enable_dns_support: true
+    
+    subnets:
+      - name: "public-a"
+        cidr_block: "10.0.1.0/24"
+        availability_zone: "us-east-1a"
+        public: true
+        
+      - name: "public-b"
+        cidr_block: "10.0.2.0/24"
+        availability_zone: "us-east-1b"
+        public: true
+      
+      - name: "private-a"
+        cidr_block: "10.0.11.0/24"
+        availability_zone: "us-east-1a"
+        public: false
+        
+      - name: "private-b"
+        cidr_block: "10.0.12.0/24"
+        availability_zone: "us-east-1b"
+        public: false
+  
+  # VPN Configuration
+  vpn:
+    enabled: true
+    customer_gateway:
+      ip_address: "203.0.113.1"  # REPLACE with your public IP
+      bgp_asn: 65000
+      device_name: "lab-router"
+    
+    # Use BGP for dynamic routing
+    static_routes_only: false
+    
+    # Amazon side ASN (optional, defaults to 64512)
+    amazon_side_asn: 64512
+  
+  # Enable NAT Gateway for private subnets
+  enable_nat_gateway: true
+  
+  # Enable VPC Flow Logs for monitoring
+  enable_flow_logs: true

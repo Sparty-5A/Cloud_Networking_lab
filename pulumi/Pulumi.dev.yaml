@@ -1,0 +1,7 @@
+encryptionsalt: v1:Ssue2FVa/Ec=:v1:nvKiGG9Lh3HAgPvr:EG3C7HIzL7b1E20SuDYKWhFLomCddw==
+config:
+  aws:region: us-east-1
+  cloud-networking-lab:vpc_cidr: 10.0.0.0/16
+  cloud-networking-lab:enable_vpn: "false"
+  cloud-networking-lab:enable_flow_logs: "false"
+  cloud-networking-lab:enable_web_server: "true"

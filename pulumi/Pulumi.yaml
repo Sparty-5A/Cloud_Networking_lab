@@ -1,0 +1,7 @@
+name: cloud-networking-lab
+runtime:
+  name: python
+  options:
+    virtualenv: ../.venv
+description: AWS Cloud Networking Lab - Hybrid cloud connectivity with Pulumi
+

@@ -1,0 +1,144 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+.venv/
+venv/
+ENV/
+env/
+.virtualenv/
+
+# PyCharm
+.idea/
+*.iml
+*.iws
+.idea_modules/
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Pulumi
+.pulumi/
+Pulumi.*.yaml.bak
+
+# LocalStack - NEW!
+localstack-data/
+.localstack/
+
+# AWS Credentials (never commit these!)
+.aws/
+*.pem
+*.key
+
+# Logs
+*.log
+logs/
+*.log.*
+
+# OS Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*~
+.directory
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# Test coverage
+.coverage
+.coverage.*
+htmlcov/
+.pytest_cache/
+.tox/
+.hypothesis/
+
+# Documentation builds
+docs/_build/
+site/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Package manager
+pip-log.txt
+pip-delete-this-directory.txt
+
+# uv
+.uv/
+uv.lock.bak
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# IDE
+*.sublime-project
+*.sublime-workspace
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Project specific
+scratch/
+temp/
+tmp/
+
+# Pulumi state (if using local backend - usually not needed)
+# Uncomment if you use --local backend
+# .pulumi/
+
+# LocalStack Pro license (if you get Pro)
+# Uncomment if you use LocalStack Pro
+# .localstack.license
+
+# AWS deployment logs (optional tracking file)
+aws_deployments.log
+
+# Screenshots for portfolio (optional - you might want to commit these)
+# screenshots/
+# portfolio/

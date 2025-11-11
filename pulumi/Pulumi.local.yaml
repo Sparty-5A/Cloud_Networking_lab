@@ -1,0 +1,21 @@
+config:
+  # AWS Configuration for LocalStack
+  aws:region: us-east-1
+  aws:accessKey: test
+  aws:secretKey: test
+  aws:skipCredentialsValidation: "true"
+  aws:skipMetadataApiCheck: "true"
+  aws:skipRequestingAccountId: "true"
+  # LocalStack endpoints - all point to localhost:4566
+  aws:endpoints:
+    - ec2: http://localhost:4566
+    - iam: http://localhost:4566
+    - cloudwatch: http://localhost:4566
+    - logs: http://localhost:4566
+    - sts: http://localhost:4566
+  # Your Cloud Networking Lab configuration
+  cloud-networking-lab:vpc_cidr: 10.0.0.0/16
+  cloud-networking-lab:enable_vpn: "false"
+  cloud-networking-lab:enable_flow_logs: "false"
+  cloud-networking-lab:enable_web_server: "true"
+encryptionsalt: v1:FE+Tx4aznx0=:v1:gs6FcUu02/HKEY50:bTcqGN1A1TgwHGMWrMtTVbOQdQV6Ew==

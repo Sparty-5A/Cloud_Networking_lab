@@ -1,0 +1,53 @@
+services:
+  localstack:
+    container_name: cloud-networking-lab-localstack
+    image: localstack/localstack:latest
+    ports:
+      - "127.0.0.1:4566:4566"            # LocalStack Gateway
+      - "127.0.0.1:4510-4559:4510-4559"  # External services port range
+    environment:
+      # Core services for your VPC networking lab
+      - SERVICES=ec2,vpc,iam,cloudwatch,logs,sts
+      
+      # Debug mode for learning
+      - DEBUG=1
+      
+      # Persistence - keep data between restarts
+      - PERSISTENCE=1
+
+      # Docker settings
+      - DOCKER_HOST=unix:///var/run/docker.sock
+
+      # Lambda settings (if you add Lambda functions later)
+      - LAMBDA_EXECUTOR=docker-reuse
+
+      # Hostname resolution
+      - HOSTNAME_EXTERNAL=localhost
+
+    volumes:
+      # Persist LocalStack data - FIXED PATH
+      - "./localstack-data:/var/lib/localstack"
+
+      # Docker socket for Lambda execution
+      - "/var/run/docker.sock:/var/run/docker.sock"
+
+    networks:
+      - cloud-lab-network
+
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:4566/_localstack/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+networks:
+  cloud-lab-network:
+    driver: bridge
+    name: cloud-lab-network
+
+# To use:
+# docker-compose up -d     # Start LocalStack
+# docker-compose ps        # Check status
+# docker-compose logs -f   # View logs
+# docker-compose down      # Stop LocalStack
