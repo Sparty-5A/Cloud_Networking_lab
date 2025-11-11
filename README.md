@@ -110,7 +110,7 @@ Docker (for LocalStack)
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/Cloud_Networking_Lab.git
+git clone https://github.com/Sparty-5A/Cloud_Networking_Lab.git
 cd Cloud_Networking_Lab
 
 # Install dependencies with uv
@@ -449,7 +449,7 @@ deploy_network(intent)
 
 **💡 Tips to Minimize Costs:**
 - Destroy resources when not in use: `pulumi destroy`
-- Use `t2.micro` instances (free tier eligible)
+- Use `t3.micro` instances (free tier eligible)
 - Monitor usage with AWS Cost Explorer
 - Set up billing alerts
 
@@ -518,7 +518,7 @@ MIT License - see [LICENSE](LICENSE) for details
 
 ## 📞 **Contact**
 
-**Project Link:** https://github.com/yourusername/Cloud_Networking_Lab
+**Project Link:** https://github.com/Sparty-5A/Cloud_Networking_Lab
 
 **Portfolio:** [Link to your portfolio]
 
@@ -528,13 +528,13 @@ MIT License - see [LICENSE](LICENSE) for details
 
 ## 🎓 **Part of NetDevOps Portfolio Series**
 
-- **Task 1:** [Nokia SROS Automation](https://github.com/yourusername/NetDevOps_Nokia_SROS) - Network automation with Python
-- **Task 2:** [Cloud Networking Lab](https://github.com/yourusername/Cloud_Networking_Lab) - AWS infrastructure *(You are here)*
+- **Task 1:** [Nokia SROS Automation](https://github.com/Sparty-5A/NetDevOps_project) - Network automation with Python
+- **Task 2:** [Cloud Networking Lab](https://github.com/Sparty-5A/Cloud_Networking_Lab) - AWS infrastructure *(You are here)*
 - **Task 3:** SD-WAN & Overlay Networking *(Coming soon)*
 - **Task 4:** Observability & Validation *(Coming soon)*
 
 ---
 
-**Built with ❤️ for learning and portfolio development**
+**Built for learning and portfolio development**
 
 *"The best way to learn is to build"*
